@@ -36,6 +36,3 @@ $RECYCLE.BIN/
 
 # Local environment variables
 .env
-
-# code snippets
-SELECT Id,Salutation,Name,Title_Handbook__c,Diocese_Primary_Affiliation__c FROM Contact WHERE Australian_Catholic_Bishop__c = true AND npsp__Deceased__c = false AND Bishop_Retired__c = false ORDER BY LastName ASC NULLS LAST

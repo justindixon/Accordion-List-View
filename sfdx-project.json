@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "ACBC Website Project",
+  "name": "sObject Accordion List View",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "52.0"
