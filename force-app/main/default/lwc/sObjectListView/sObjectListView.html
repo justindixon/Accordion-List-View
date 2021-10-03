@@ -5,14 +5,14 @@
                 <div class="slds-p-around_medium">
                     <template for:each={records} for:item="record">
                         <lightning-accordion-section key={record.Name} name={record.Name} label={record.Name}>
-                            <div class="slds-grid">
-                                <div class="slds-col">
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div class="slds-col slds-size_2-of-3">
                                     <template for:each={record.fields} for:item="field">
                                         <div key={field.fieldName} class="slds-text-body_regular"><b>{field.fieldName}:</b> {field.fieldValue}</div>
                                     </template>
                                 </div>
-                                <div class="slds-col">
-                                    <img src={record.ImageURL} style="width:80%;height:80%;" />
+                                <div class="slds-col slds-size_1-of-3">
+                                    <img src={record.ImageURL} class="slds-float_right" style="width:90%;height:90%;" />
                                 </div>
                             </div>
                         </lightning-accordion-section>
