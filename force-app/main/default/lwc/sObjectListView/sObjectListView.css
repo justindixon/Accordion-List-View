@@ -1,0 +1,9 @@
+:host {
+    --background-colour: white;
+}
+
+.sobjlv__backgrounddiv {
+    max-height:400px;
+    min-width: 100%;
+    background-color: var(--background-colour, white);
+}

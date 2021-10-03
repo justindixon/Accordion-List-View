@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-grid">
+        <div id="sobjlv__backgrounddiv" class="slds-p-around_medium slds-scrollable_y sobjlv__backgrounddiv">
+            <lightning-accordion allow-multiple-sections-open> 
+                <div class="slds-p-around_medium">
+                    <template for:each={records} for:item="record">
+                        <lightning-accordion-section key={record.Name} name={record.Name} label={record.Name}>
+                            <div class="slds-grid">
+                                <div class="slds-col">
+                                    <template for:each={record.fields} for:item="field">
+                                        <div key={field.fieldName} class="slds-text-body_regular"><b>{field.fieldName}:</b> {field.fieldValue}</div>
+                                    </template>
+                                </div>
+                                <div class="slds-col">
+                                    <img src={record.ImageURL} style="width:80%;height:80%;" />
+                                </div>
+                            </div>
+                        </lightning-accordion-section>
+                    </template>
+                </div>
+            </lightning-accordion>
+        </div>
+    </div>   
+</template>

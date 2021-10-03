@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property default="" placeholder="Enter SOQL Here" name="sOQLString" type="String" label="SOQL String" description="Enter a SOQL Query to display a list of records. No SOQL relationships."  />
+            <property name="nameField" label="Name Field" type="String" default="Name" placeholder="Name" description="Use API Name. Needed for the title of the sections." required="true" />
+            <property name="imageField" label="Image Field" type="String" default="" description="Optional. Use API Name." />
+            <property name="backgroundColour" type="Color" default="rgb(255, 255, 255)" label="Background Colour" />
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage, lightning__HomePage, lightning__RecordPage">
+            <property default="" placeholder="Enter SOQL Here" name="sOQLString" type="String" label="SOQL String" description="Enter a SOQL Query to display a list of records. No SOQL relationships."  />
+            <property name="nameField" label="Name Field" type="String" default="Name" placeholder="Name" description="Use API Name. Needed for the title of the sections." required="true" />
+            <property name="imageField" label="Image Field" type="String" default="" description="Optional. Use API Name." />
+            <property name="backgroundColour" type="String" default="white" placeholder="white" label="Background Label" description="Accepts CSS, rgb(), rgba()." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
